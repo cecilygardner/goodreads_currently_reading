@@ -1,5 +1,3 @@
-#How does this script work?
-
 Goodreads.py connects to the Goodreads.com and Asana.com API. To connect to the
 API you will need to grab and insert your personal access tokens, urser ids,
 etc to the config.json file. In this file you can also specify your 'ideal
