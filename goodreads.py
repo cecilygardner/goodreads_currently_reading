@@ -24,7 +24,8 @@ def grab_currently_reading(config):
         "https://www.goodreads.com/review/list", params=params)
 
     root_1 = ET.fromstring(response_1.text.encode("utf-8"))
-
+    
+    print("Grabbing currently reading shelf")
     return root_1
 
 
@@ -55,7 +56,8 @@ def grab_books(config):
         "https://www.goodreads.com/review/list", params=params)
 
     root = ET.fromstring(response.text.encode("utf-8"))
-
+    
+    print("Grabbing to-read shelf") 
     return root
 
 
@@ -103,7 +105,7 @@ def parse_books(config, root, currently_reading):
         asana_client = asana.Client.access_token(
             config['personal_access_token'])
         asana_client.tasks.create(params)
-        print("I'm done")
+        print("I'm finished!")
 
 
 def main():
